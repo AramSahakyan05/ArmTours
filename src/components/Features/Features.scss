@@ -1,0 +1,39 @@
+.features__section {
+  background-color: var(--features-background);
+  margin-top: 80px;
+  padding: 50px 25px 40px;
+  > .container {
+    .features__section__heading {
+      text-align: center;
+      color: var(--white);
+      > h1 {
+          font-size: 35px;
+      }
+    }
+    > .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 50px;
+      > .col1 {
+        width: 49%;
+        background-color: var(--plan-background);
+        border-radius: 10px;
+        padding: 24px;
+        display: flex;
+        > .cube {
+          font-size: 35px;
+        }
+        > .feature-info {
+          margin-left: 20px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          > p {
+            margin: 15px 0 10px;
+          }
+        }
+      }
+    }
+  }
+}

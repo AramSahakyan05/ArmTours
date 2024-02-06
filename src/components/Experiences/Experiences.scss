@@ -1,0 +1,26 @@
+.experiences__section {
+    padding: 120px 0 80px;
+    > .container {
+      .experiences__section__heading {
+        text-align: center;
+        > h1 {
+            font-size: 2rem;
+            color: var(--learn-more-button);
+        }
+        > a.read-more {
+            padding: 8px 24px;
+            background-color: var(--button-background);
+            border-radius: 20px;
+            color: var(--white);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 60px;
+            cursor: text;
+            transition: all 200ms ease 0s;
+            &:hover {
+              background-color: var(--button-hover-background);
+            }
+        }
+      }
+    }
+}
