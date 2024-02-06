@@ -4,6 +4,7 @@ import { FaFacebookF } from "react-icons/fa";
 
 export const ROUTES = {
     home : "/",
+    signup: "/signup",
 }
 export const config = {
     navbar: [

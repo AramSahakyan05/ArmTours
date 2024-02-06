@@ -1,7 +1,7 @@
 import { Home } from '../components/Home/Home'
 import { Layout } from '../layout/Layout'
 
-const HomePage = () => {
+export const HomePage = () => {
   return (
     <Layout>
         <Home />
@@ -9,4 +9,3 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
