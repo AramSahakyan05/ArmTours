@@ -1,0 +1,79 @@
+.plan__section {
+    margin-top: 80px;
+    padding: 0 25px;
+    > .container {
+      > .plan__section__heading {
+        text-align: center;
+        color: var(--plan-heading-color);
+        > h5 {
+          margin-bottom: 20px;
+        }
+        > h1 {
+          font-size: 35px;
+        }
+      }
+      > .plans {
+        margin-top: 50px;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        > .free {
+          width: 31.7%;
+          background-color: var(--plan-background);
+          padding: 32px;
+          border-radius: 32px;
+          > h3 {
+            font-weight: 200;
+          }
+          > p.explore {
+            margin: 20px 0;
+          }
+          > p.plan-price {
+            font-size: 1.15rem;
+            font-style: normal;
+            font-weight: 200;
+            color: var(--plan-price-color);
+            > span {
+                font-size: 4rem;
+                font-weight: 900;
+            }
+          }
+          > ul.description {
+            margin: 70px 0;
+            > li {
+                list-style-type: none;
+                margin: 15px 0;
+                &:before {
+                  content: '✓';
+                }
+            }
+          }
+          > a.order-button {
+              border-radius: 20px;
+              color: var(--plan-button-color);
+              border: 1px solid var(--plan-button-color);
+              text-decoration: none;
+              display: flex;
+              justify-content: center;
+              padding: 10px 0;
+              transition: all 200ms ease 0s;
+              font-weight: 700;
+            &:hover {
+                color: var(--features-background);
+                background-color: var(--plan-button-hover-color);
+            }
+          }
+          > .basic-order-button {
+            border-radius: 0px !important;
+            background-color: var(--plan-button-color);
+            color: var(--white) !important;
+            &:hover {
+              background-color: var(--button-hover-background) !important;
+            }
+          }
+        }
+      }
+    }
+}

@@ -1,9 +1,9 @@
 import { UsersModel } from "./models/Users.js";
 import bcrypt from 'bcrypt';
 
-export const addUser = async (email, hashedPwd) => {
+export const addUser = async (name, email, hashedPwd, role) => {
     try {
-      const newUser = new UsersModel({email, password: hashedPwd})
+      const newUser = new UsersModel({name, email, password: hashedPwd, role})
       const result = await newUser.save();
       console.log('User added: ', result);
     } catch (error) {
@@ -24,7 +24,7 @@ export const findUserByEmail = async (email, password, done) => {
 }
 
 export const checkSignUp = async (req, res) => {
-    const { email, password, confirmPassword } = req.body;
+    const { name, email, password, confirmPassword, role } = req.body;
     const hashedPwd = await bcrypt.hash(password, 10);
     try {
         const existingUser = await UsersModel.findOne({email: email});
@@ -32,7 +32,7 @@ export const checkSignUp = async (req, res) => {
             res.json({message: 'User already exists'});
         }
         if(password === confirmPassword) {
-            await addUser(email, hashedPwd);
+            await addUser(name, email, hashedPwd, role);
             res.json({success: true, route: '/armtours/login'});
         } else {
             res.json({message: 'Incorrect password'})

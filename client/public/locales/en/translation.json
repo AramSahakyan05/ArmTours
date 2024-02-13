@@ -1,0 +1,142 @@
+{
+  "header" : {
+    "header_selectLang" : {
+      "arm" : "Armenian",
+      "rus" : "Russian",
+      "eng" : "English"
+    }
+  },
+  "home_first_section" : {
+    "title" : "Discover Armenia",
+    "fbutton" : "Find Your Adventure",
+    "sbutton" : "Learn More"
+  },
+  "feature" : {
+    "title" : "Features",
+    "heading" : "Discover Armenia's Touring Activities",
+    "features" : [
+      {
+        "title" : "Comprehensive Tour Information",
+        "description" : "Get detailed information about all touring activities in Armenia"
+      },
+      {
+        "title" : "Interactive Maps",
+        "description" : "Explore the attractions and plan your itinerary with interactive maps"
+      },
+      {
+        "title" : "User Reviews and Ratings",
+        "description" : "Read authentic user reviews and ratings to make informed decisions"
+      },
+      {
+        "title" : "Booking Convenience",
+        "description" : "Easily book your preferred tours and activities online"
+      }
+    ]
+  },
+  "plan" : {
+    "title" : "PRICING",
+    "heading" : "Choose Your Plan",
+    "plans" : [
+      {
+        "type" : "FREE",
+        "subtitle" : "Explore basic touring activities in Armenia",
+        "currency" : "$",
+        "price" : "0",
+        "term" : "month",
+        "description" : [
+            {
+              "title" : "Access to a limited number of touring activities"
+            },
+            {
+              "title" : "Basic information about each activity"
+            },
+            {
+              "title" : "No advanced features"
+            }
+        ],
+        "button" : "Continue with Free"
+      },
+      {
+        "type" : "BASIC",
+        "subtitle" : "Unlock more touring activities and features",
+        "currency" : "$",
+        "price" : "15",
+        "term" : "month",
+        "description" : [
+          {
+            "title" : "All features of FREE plan"
+          },
+          {
+            "title" : "Access to a wider range of touring activities"
+          },
+          {
+            "title" : "Detailed information about each activity"
+          },
+          {
+            "title" : "Ability to save favorite activities"
+          },
+          {
+            "title" : "Basic customer support"
+          }
+        ],
+        "button" : "Try the Basic plan"
+      },
+      {
+        "type" : "PRO",
+        "subtitle" : "Get the ultimate touring experience in Armenia",
+        "currency" : "$",
+        "price" : "30",
+        "term" : "month",
+        "description" : [
+          {
+            "title" : "All features of BASIC plan"
+          },
+          {
+            "title" : "Access to all touring activities available"
+          },
+          {
+            "title" : "Detailed information with photos and reviews for each activity"
+          },
+          {
+            "title" : "Ability to create custom itineraries"
+          },
+          {
+            "title" : "Priority customer support"
+          }
+        ],
+        "button" : "Try the PRO plan"
+      }
+    ]
+  },
+  "experiences" : {
+    "title" : "Unforgettable Experiences in Armenia",
+    "button" : "Read More"
+  },
+  "faq" : {
+    "title" : "Common questions",
+    "subtitle" : "Here are some of the most common questions what we get",
+    "questions" : [
+      {
+        "question" : "What types of touring activities are available in Armenia?",
+        "answer" : "Armenia offers a wide range of touring activities including cultural tours, hiking and trekking, wine tasting tours, historical sightseeing, adventure tours, and more."
+      },
+      {
+        "question" : "How can I book a touring activity in Armenia?",
+        "answer" : "Booking a touring activity in Armenia is easy. Simply browse through our website, select the activity you are interested in, and follow the booking instructions provided."
+      },
+      {
+        "question" : "Are the touring activities guided?",
+        "answer" : "Yes, most of the touring activities in Armenia are guided. Our experienced and knowledgeable guides will accompany you throughout the tour to provide valuable insights and ensure a memorableexperience."
+      },
+      {
+        "question" : "What is the best time to visit Armenia for touring activities?",
+        "answer" : "The best time to visit Armenia for touring activities is during the spring (April to June) and autumn (September to November) seasons when the weather is pleasant and the landscapes are at their most beautiful."
+      },
+      {
+        "question" : "Are there any age restrictions for participating in touring activities?",
+        "answer" : "The age restrictions for touring activities in Armenia may vary depending on the specific activity. Some activities may have minimum age requirements for safety reasons. Please check the activity details for any age restrictions before booking."
+      }
+    ]
+  },
+  "footer" : "© 2023 ARMTOURS, All Rights Reserved."
+}
