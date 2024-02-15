@@ -12,17 +12,17 @@ export const Overview = () => {
   const {
     i18n: { language },
   } = useTranslation();
-  const { home_first_section } = config;
+  const { overview_first_section } = config;
     return (
       <>
-      <section className="home__first__section">
+      <section className="overview__first__section">
          <Container>
           <div className='heading'>
-            <h1>{home_first_section.title[language]}</h1>
+            <h1>{overview_first_section.title[language]}</h1>
           </div>
           <div className="learn__more">
-            <a href="#">{home_first_section.fbutton[language]}</a>
-            <a href="#">{home_first_section.sbutton[language]}<HiOutlineArrowLongRight /></a>
+            <a href="#">{overview_first_section.fbutton[language]}</a>
+            <a href="#">{overview_first_section.sbutton[language]}<HiOutlineArrowLongRight /></a>
           </div>
          </Container>
       </section>

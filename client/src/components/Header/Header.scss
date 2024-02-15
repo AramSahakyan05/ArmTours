@@ -1,5 +1,5 @@
 header {
-  padding: 24px;
+  padding: 20px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -12,6 +12,9 @@ header {
       align-items: center;
       > .logo {
         margin-left: 20px;
+        > h1 {
+          color: var(--home-explore);
+        }
       }
       > nav {
         margin-left: 130px;
@@ -20,40 +23,36 @@ header {
           > li {
             list-style-type: none;
             margin: 0 18px;
+            color: var(--home-explore);
           }
         }
       }
-      > .auth-buttons {
-          margin-right: 10px;
-          > a {
-            padding: 8px 20px;
-            border: none;
-            outline: none;
-            border-radius: 16px;
-            margin: 0 10px;
-            font-weight: bold;
-            font-size: 15px;
-            text-decoration: none;
-            color: var(--learn-more-button);
-            &:nth-child(1) {
-              background: none;
-            }
-            &:nth-child(2) {
-                background-color: var(--button-background);
-                color: #fff;
-                transition: all 200ms ease 0s;
-                &:hover {
-                  background-color: var(--button-hover-background);
-                }
-            }
-          }
+      > .contact-auth-buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        > span {
+          display: flex;
+        }
+        > span:nth-child(1) {
+          align-items: center;
+          gap: 7px;
+          padding-right: 10px;
+          border-right: 1px solid var(--home-explore);
+        }
+        > span:nth-child(2) {
+          font-size: 20px;
+          cursor: pointer;
+        }
       }
       .langs {
         font-weight: 200;
         position: relative;
+          color: var(--home-explore);
         > span.default-lang {
           font-size: 1.1rem;
           padding: 4px 20px 4px 8px;
+          color: var(--home-explore);
           cursor: pointer;
         }
         &:hover span {
@@ -62,7 +61,6 @@ header {
         > .hidden-langs {
           display: flex;
           flex-direction: column;
-          gap: 5px;
           position: absolute;
           list-style: none;
           border-left: 4px solid var(--plan-button-color);
@@ -73,12 +71,13 @@ header {
           transition: all .2s;
           z-index: -2;
           visibility: hidden;
-          background-color: var(--features-background);
+          background-color: var(--home-explore);
           padding: 10px;
           padding-top: 5px;
           > li {
             list-style-type: none;
             font-size: 1.2rem;
+            color: var(--home-explore);
             cursor: pointer;
             transition: all .2s;
             color: var(--white);

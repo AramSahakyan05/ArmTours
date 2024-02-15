@@ -1,12 +1,23 @@
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
+// Banner Images
+import banner1 from './assets/banner/banner1.jpg';
+import banner2 from './assets/banner/banner2.jpg';
+import banner3 from './assets/banner/banner3.jpg';
+import banner4 from './assets/banner/banner4.jpg';
+
 
 export const ROUTES = {
   overview : "/armtours",
+  home: '/armtours/home',
   signup: "/armtours/signup",
-  login: '/armtours/login'
+  login: '/armtours/login',
+  profile: '/armtours/profile'
 }
+export const bannerImages = [
+  banner1, banner2, banner3, banner4
+]
 export const langs = [
   { id: 1, title: "English", type: "en" },
   { id: 2, title: "Հայերեն", type: "am" },
@@ -47,14 +58,6 @@ export const config = {
         ru: 'О нас'
       },
     },
-    {
-      id: 5,
-      title: {
-        am: 'Կապ',
-        en: 'Contact',
-        ru: 'Контакт'
-      },
-    },
   ],
   auth_buttons: [
     {
@@ -76,7 +79,7 @@ export const config = {
         route: 'signup'
     }
   ],
-  home_first_section: {
+  overview_first_section: {
     title : {
       am: "Բացահայտեք Հայաստանը",
       en: "Discover Armenia",
@@ -357,12 +360,12 @@ export const config = {
   faq: {
     aside:  {
       title: {
-        am: "Ընդհանուր հարցեր",
+        am: "Տարածված հարցեր",
         en: "Common questions",
         ru: "Общие вопросы"
       },
       subtitle: {
-        am: "Ահա մի քանի ամենատարածված հարցերը, որոնք մենք ստանում ենք:",
+        am: "Ահա մի քանի ամենատարածված հարցերը, որոնք մենք ստանում ենք",
         en: "Here are some of the most common questions whatwe get.",
         ru: "Вот некоторые из наиболее распространенных вопросов, которые мы получаем."
       }
@@ -457,7 +460,58 @@ export const config = {
       }
     ]
   },
-  
+  home: {
+    home_intro: {
+      subheading: {
+        am: "Բնական գեղեցկություն",
+        en: "Natural beauty",
+        ru: "Натуральная красота"
+      },
+      heading: {
+        am: "Բացահայտեք առավել գրավիչ վայրերը",
+        en: "Discover the most engaging places",
+        ru: "Откройте для себя самые привлекательные места"
+      },
+      explore_button: {
+        am: "Ուսումնասիրեք հիմա",
+        en: "Explore Now",
+        ru: "Исследуйте сейчас"
+      }
+    },
+    home_order_form: {
+      form_destination: {
+        title: {
+          am: "Ուղղություններ",
+          en: "Destinations",
+          ru: "Направления"
+        },
+        subtitle: {
+          am: "Ու՞ր եք որոշել գնալ",
+          en: "Destinations",
+          ru: "Куда ты идешь?"
+        }
+      },
+      form_date: {
+        title: {
+          am: "Երբ",
+          en: "When",
+          ru: "Когда"
+        },
+        subtitle: {
+          am: "Ամսաթիվը",
+          en: "Date from",
+          ru: "Дата, с"
+        }
+      },
+      form_guests: {
+        title: {
+          am: "Հյուրեր",
+          en: "Guests",
+          ru: "Гости"
+        }
+      }
+    }
+  }
 }
 export const  generateUniqueId = () => {
   const timestamp = Date.now().toString(36);

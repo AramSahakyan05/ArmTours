@@ -8,6 +8,7 @@ export const Plan = () => {
   const {
     i18n: { language }
   } = useTranslation();
+  console.log(language);
   const { plan } = config;
 
   return (
@@ -24,7 +25,7 @@ export const Plan = () => {
                 <div key={generateUniqueId()} className="free">
                   <h3>{type}</h3>
                   <p className='explore'>{subtitle[language]}</p>
-                  <p className='plan-price'>
+                  <p className={`plan-price  ${id === 1 && language === 'am' ? "free-price" : id === 3 && language === 'am' ? 'pro-price' : ''} `}>
                     {currency} <span>{price}</span> / {term[language]}
                   </p>
                   <ul className='description'>

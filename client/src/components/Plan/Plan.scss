@@ -29,6 +29,7 @@
           }
           > p.explore {
             margin: 20px 0;
+            line-height: 25px;
           }
           > p.plan-price {
             font-size: 1.15rem;
@@ -40,11 +41,15 @@
                 font-weight: 900;
             }
           }
+          > p.free-price, > p.pro-price {
+            margin-top: 40px;
+          }
           > ul.description {
             margin: 70px 0;
             > li {
                 list-style-type: none;
                 margin: 15px 0;
+                line-height: 25px;
                 &:before {
                   content: '✓';
                 }

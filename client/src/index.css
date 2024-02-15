@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--global-font);
+  user-select: none;
 }
 :root {
   --white: #fff;
@@ -21,4 +22,5 @@
   --faq-background: #C7B090;
   --global-font: "Cabin", sans-serif;
   --footer-border-color: #D9D9D9;
+  --home-explore: #313638;
 }

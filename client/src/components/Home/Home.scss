@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Cham:wght@100..900&display=swap');
+
+.home-section {
+    position: relative;
+    height: 100vh;
+  > .home-back-image {
+    width: 100%;
+    height: 90%;
+  }
+  > main {
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    right: 3%;
+    > .home-intro {
+      > h2.explore-subheading {
+        font-family: "Cedarville Cursive", cursive;
+        font-size: 2rem;
+        color: var(--home-explore);
+      }
+      > h1.explore-heading {
+        font-size: 4.2rem;
+        font-family: "Noto Sans Cham", sans-serif;
+        font-weight: 900;
+        line-height: 67px;
+        color: var(--home-explore);
+      }
+      > a.explore-button {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+        margin: 35px 0;
+        min-width: 12%;
+        max-width: 18%;
+        color: #feeceb;
+        background-color: var(--home-explore);
+        border-radius: 5px;
+        transition: all 400ms ease 0s;
+      }
+    }
+    > .home-order-form {
+      display: flex;
+      justify-content: flex-start;
+      > .destination-select, .guests-select {
+        position: relative;
+        min-width: 30%;
+        > .direction, .guests-quantity {
+          position: absolute;
+          top: 90px;
+          left: 0;
+          right: 0;
+          max-height: 90px;
+          overflow: auto;
+          border: solid red;
+          border-radius: 15px;
+        }
+      }
+      .destinations {
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+      .date {
+        min-width: 30%;
+      }
+      .destinations, .guests, .date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90px;
+        gap: 10px;
+        background-color: #feeceb;
+        padding: 20px;
+        > div.icon:first-child {
+          > svg {
+            font-size: 1.7rem;
+          }
+        }
+        > div.icon:last-child {
+          padding-top: 10px;
+          padding-left: 10px;
+          > svg {
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 400ms ease 0s;
+          }
+        }
+      }
+      > div.date {
+        position: relative;
+        cursor: pointer;
+        > div > .react-datepicker {
+          position: absolute !important;
+          top: -250px;
+          right: 0;
+        }
+      }
+      > div:nth-child(1) {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-right: solid var(--home-explore);
+      }
+      > div:nth-child(3) {
+        border-left: solid var(--home-explore);
+      }
+      > button {
+        width: 10%;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1rem;
+        background-color: #feeceb;
+        border-left: solid var(--home-explore);
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        cursor: pointer;
+        > svg {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}

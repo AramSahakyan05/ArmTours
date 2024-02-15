@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Formik } from 'formik';
-import tatev_video from '../../../assets/tatev.mp4';
 import armenia from '../../../assets/armenia.mp4'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -36,9 +35,6 @@ export const SignUp = () => {
       theme: "light",
     });
   }
-  // useEffect(() => {
-  //   console.log(role);
-  // }, [role, setRole]);
 
   return (
     <section className="signup__section">
@@ -70,6 +66,7 @@ export const SignUp = () => {
               confirmPassword: values.confirmPassword,
               role: role
             });
+            localStorage.setItem(`user`, JSON.stringify(values));
             if(resp.data.success) {
               notifySuccess('You signed up successfully');
               navigate(resp.data.route);
@@ -93,7 +90,7 @@ export const SignUp = () => {
            isSubmitting,
          }) => (
            <form onSubmit={handleSubmit}>
-            <h1>SignUp</h1>
+            <h1>Sign Up</h1>
             <div>
               <label htmlFor="name">Name</label>
               <input
