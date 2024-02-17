@@ -30,15 +30,15 @@
         text-decoration: none;
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 10px;
         padding: 20px;
         margin: 35px 0;
-        min-width: 12%;
-        max-width: 18%;
+        max-width: 12%;
         color: #feeceb;
         background-color: var(--home-explore);
         border-radius: 5px;
-        transition: all 400ms ease 0s;
+        transition: background-color 400ms ease 0s;
       }
     }
     > .home-order-form {
@@ -46,7 +46,7 @@
       justify-content: flex-start;
       > .destination-select, .guests-select {
         position: relative;
-        min-width: 30%;
+        min-width: 29%;
         > .direction, .guests-quantity {
           position: absolute;
           top: 90px;
@@ -54,8 +54,17 @@
           right: 0;
           max-height: 90px;
           overflow: auto;
-          border: solid red;
           border-radius: 15px;
+        }
+        > .direction, > .guests-quantity {
+          transition: all 400ms ease 0s;
+          > .direction-item, > .guests-quantity-item {
+            padding: 10px;
+            border-bottom: 1px solid #bbb;
+            background-color: #feeceb;
+            cursor: pointer;
+            transition: all 400ms ease 0s;
+          }
         }
       }
       .destinations {
@@ -63,9 +72,11 @@
         border-bottom-left-radius: 15px;
       }
       .date {
-        min-width: 30%;
+        min-width: 29%;
       }
       .destinations, .guests, .date {
+        position: relative;
+        z-index: 1;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -106,7 +117,7 @@
         border-left: solid var(--home-explore);
       }
       > button {
-        width: 10%;
+        width: 13%;
         border: none;
         outline: none;
         display: flex;

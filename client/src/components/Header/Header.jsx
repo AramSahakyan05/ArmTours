@@ -34,7 +34,16 @@ export const Header = () => {
           <ul>
             {
               config.navbar.map(({id, title}) => {
-                return <li key={id}>{title[language]}</li>
+                return (
+                  <li 
+                    key={id}
+                    onClick={() => {
+                      id === 1 && navigate('/armtours/home');
+                    }}
+                  >
+                    {title[language]}
+                  </li>
+                )
               })
             }
           </ul>

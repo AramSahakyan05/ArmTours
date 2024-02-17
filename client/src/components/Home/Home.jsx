@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import { SlLocationPin } from "react-icons/sl";
@@ -18,23 +18,35 @@ export const Home = () => {
   const {
     i18n: { language }
   } = useTranslation();
-  const {home_intro, home_order_form } = config.home;
+  const {home_intro, home_order_form, direction, guests } = config.home;
   const {form_destination, form_date, form_guests} = home_order_form;
   const [showDatePicker, setShowDatePicker] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
-  const [destination, setDestination] = useState(false);
-  const [guests, setGuests] = useState(false);
+  const [destArrow, setDestArrow] = useState(false);
+  const [guestArrow, setGuestArrow] = useState(false);
+  const [destSelectedOption, setDestSelectedOption] = useState('');
+  const [guestSelectedOption, setGuestSelectedOption] = useState('');
   
   const handleDateChange = date => {
     setSelectedDate(date);
-    setShowDatePicker(false); // Hide the DatePicker after selecting a date
+    setShowDatePicker(false);
   };
+  // const changeZIndex = () => {
+  //   setTimeout(() => {
+  //     setDirectionStyle(prev => {
+  //       return {
+  //         ...prev,
+  //         zIndex: 'unset'
+  //       }
+  //     })
+  //   }, 500);
+  // }
 
   return (
     <section className="home-section">
       <Header />
       <img 
-      src={home_main_picture} 
+      src={home_main_picture}
       className="home-back-image" 
       alt="Main background picture" 
       />
@@ -42,7 +54,7 @@ export const Home = () => {
           <div className="home-intro">
             <h2 className='explore-subheading'>{home_intro.subheading[language]}</h2>
             <h1 className='explore-heading' style={{width: `${language === 'ru' ? '73%' : '45%'}`}}>{home_intro.heading[language]}</h1>
-            <a href="#" className='explore-button'>
+            <a href="#" className='explore-button' style={{maxWidth: (language === 'am' || language === 'ru') ? '18%' : '12%'}}>
               {home_intro.explore_button[language]}
               <HiOutlineArrowLongRight />
             </a>
@@ -54,21 +66,44 @@ export const Home = () => {
                 <div className="icon">
                   <SlLocationPin />
                 </div>
-                <div>
+                {
+                  destSelectedOption ? destSelectedOption : <div>
                   <h4>{form_destination.title[language]}</h4>
                   <p>{form_destination.subtitle[language]}</p>
                 </div>
+                }
                 <div 
                   className="icon"
                   onClick={() => {
-                    setDestination(prev => !prev);
+                    setDestArrow(prev => !prev);
                   }}
                 >
-                  <IoIosArrowDown style={{transform: `${destination ? 'rotate(180deg)' : 'none'}`}} />
+                  <IoIosArrowDown style={{transform: `${destArrow ? 'rotate(180deg)' : 'none'}`}}/>
                 </div>
               </div>
-              <div className="direction">
-                
+              <div 
+                className="direction"
+                style={{
+                  transform: `${destArrow ? 'none' : 'translateY(-90px)'}`,
+                  zIndex: `0`
+                }}
+              >
+                {
+                  direction.map(({id, destination}) => {
+                    return (
+                      <p 
+                        key={id} 
+                        className="direction-item"
+                        onClick={() => {
+                          setDestSelectedOption(destination);
+                          setDestArrow(prev => !prev);
+                        }}
+                      >
+                        {destination}
+                      </p>
+                    )
+                  })
+                }
               </div>
             </div>
             {/* Date */}
@@ -104,20 +139,44 @@ export const Home = () => {
                 <div className="icon">
                   <FaRegUser />
                 </div>
-                <div>
-                  <h4>{form_guests.title[language]}</h4>
-                </div>
+                  {
+                    guestSelectedOption ? guestSelectedOption 
+                    : <div>
+                        <h4>{form_guests.title[language]}</h4>
+                      </div>
+                  }
                 <div 
                   className="icon"
                   onClick={() => {
-                    setGuests(prev => !prev);
+                    setGuestArrow(prev => !prev);
                   }}
                 >
-                  <IoIosArrowDown style={{transform: `${guests ? 'rotate(180deg)' : 'none'}`}} />
+                  <IoIosArrowDown style={{transform: `${guestArrow ? 'rotate(180deg)' : 'none'}`}} />
                 </div>
               </div>
-              <div className="guests-quantity">
-
+              <div 
+                className="guests-quantity"
+                style={{
+                  transform: `${guestArrow ? 'none' : 'translateY(-90px)'}`,
+                  zIndex: `0`
+                }}
+              >
+                {
+                  guests.map(({id, people}) => {
+                    return (
+                      <p 
+                        key={id} 
+                        className="guests-quantity-item"
+                        onClick={() => {
+                          setGuestSelectedOption(`${people.from} - ${people.to}`);
+                          setGuestArrow(prev => !prev);
+                        }}
+                      >
+                        {people.from} - {people.to}
+                      </p>
+                    )
+                  })
+                }
               </div>
             </div>
             <button>

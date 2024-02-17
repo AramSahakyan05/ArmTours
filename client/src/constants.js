@@ -510,7 +510,48 @@ export const config = {
           ru: "Гости"
         }
       }
-    }
+    },
+    direction: [
+      {
+        id: 1,
+        destination: "The Angel's Canyon, Ararat"
+      },
+      {
+        id: 2,
+        destination: "Tatev Monastery, Syunik"
+      },
+      {
+        id: 3,
+        destination: "Saint John Church, Abovyan"
+      },
+      {
+        id: 4,
+        destination: "Noravanq, Vayots Dzor"
+      }
+    ],
+    guests: [
+      {
+        id: 1,
+        people: {
+          from: 0,
+          to: 10
+        }
+      },
+      {
+        id: 2,
+        people: {
+          from: 11,
+          to: 20
+        }
+      },
+      {
+        id: 3,
+        people: {
+          from: 21,
+          to: 30
+        }
+      },
+    ]
   }
 }
 export const  generateUniqueId = () => {
