@@ -1,0 +1,15 @@
+.why-choose-us {
+  padding: 30px;
+  padding-top: 60px;
+  &-headings {
+    text-align: center;
+  }
+  &-map {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    padding-top: 100px;
+  }
+}

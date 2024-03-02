@@ -1,3 +1,4 @@
+// Social Icons
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
@@ -6,6 +7,30 @@ import banner1 from './assets/banner/banner1.jpg';
 import banner2 from './assets/banner/banner2.jpg';
 import banner3 from './assets/banner/banner3.jpg';
 import banner4 from './assets/banner/banner4.jpg';
+// Perfect Destination Images
+import france from '../src/assets/home/perfect destinations/france.jpg';
+import greece from '../src/assets/home/perfect destinations/greece.jpg';
+import belgium from '../src/assets/home/perfect destinations/belgium.jpg';
+import armenia from '../src/assets/home/perfect destinations/armenia.jpg';
+import germany from '../src/assets/home/perfect destinations/germany.jpg';
+// Why Choose Us Icons
+import ticket from '../src/assets/why-choose-us/ticket.png';
+import map from '../src/assets/why-choose-us/map.png';
+import calendar from '../src/assets/why-choose-us/calendar.png';
+import panels from '../src/assets/why-choose-us/panels.png';
+// Customers Images
+import customer1 from '../src/assets/customer-reviews/reviews/customer1.png';
+import customer2 from '../src/assets/customer-reviews/reviews/customer2.png';
+import customer3 from '../src/assets/customer-reviews/reviews/customer3.png';
+// Advice icons
+import { CiCalendar } from "react-icons/ci";
+import { CiUser } from "react-icons/ci";
+import { GoCommentDiscussion } from "react-icons/go";
+// Travel Tips and Advice Images
+import travel1 from './assets/travel-tips/travel1.jpg';
+import travel2 from './assets/travel-tips/travel2.png';
+
+
 
 
 export const ROUTES = {
@@ -13,7 +38,10 @@ export const ROUTES = {
   home: '/armtours/home',
   signup: "/armtours/signup",
   login: '/armtours/login',
-  profile: '/armtours/profile'
+  profile: '/armtours/profile',
+  tours: '/armtours/tours',
+  destination: '/armtours/destinations',
+  about: '/armtours/about'
 }
 export const bannerImages = [
   banner1, banner2, banner3, banner4
@@ -23,7 +51,239 @@ export const langs = [
   { id: 2, title: "Հայերեն", type: "am" },
   { id: 3, title: "Русский", type: "ru" },
 ];
+export const whyChooseUs = [
+  {
+    id: 1,
+    img: ticket
+  },
+  {
+    id: 2,
+    img: map
+  },
+  {
+    id: 3,
+    img: calendar
+  },
+  {
+    id: 4,
+    img: panels
+  }
+]
+export const customer_reviews = [
+  {
+    id: 1,
+    text: "Needless to say we are extremely satisfies with the results. Booking tour was the best investment I ever made, Nice work on your booking tour. Booking tour impressed",
+    img: customer1,
+    rate: 5,
+    name: 'Mery E.',
+    location: 'Yerevan, Armenia'
+  },
+  {
+    id: 2,
+    text: "Needless to say we are extremely satisfies with the results. Booking tour was the best investment I ever made, Nice work on your booking tour. Booking tour impressed",
+    img: customer2,
+    rate: 5,
+    name: 'Mane H.',
+    location: 'Abovyan, Armenia'
+  },
+  {
+    id: 3,
+    text: "Needless to say we are extremely satisfies with the results. Booking tour was the best investment I ever made, Nice work on your booking tour. Booking tour impressed",
+    img: customer3,
+    rate: 4,
+    name: 'Taron P.',
+    location: 'Yerevan, Armenia'
+  },
+];
+export const perfectDests = [
+  {
+    id: 1,
+    img: france,
+    name: 'France',
+    count: 1,
+    tour: 'Tour'
+  },
+  {
+    id: 2,
+    img: greece,
+    name: 'Greece',
+    count: 0,
+    tour: 'Tour'
+  },
+  {
+    id: 3,
+    img: belgium,
+    name: 'Belgium',
+    count: 1,
+    tour: 'Tour'
+  },
+  {
+    id: 4,
+    img: armenia,
+    name: 'Armenia',
+    count: 1,
+    tour: 'Tour'
+  },
+  {
+    id: 5,
+    img: germany,
+    name: 'Germany',
+    count: 0,
+    tour: 'Tour'
+  }
+];
 
+
+// Current date
+
+const date = new Date();
+
+const month = date.getMonth();
+const today = date.getDay();
+const year = date.getFullYear();
+
+const months = [
+  'January', 
+  'February', 
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+]
+
+export const advice = [
+  {
+    id: 1,
+    img: travel1,
+    type: 'UNCATEGORIZED',
+    title: 'Change your place and get the fresh air',
+    description: 'A wonderful serenity has taken possession of my entire soul, like these sweet morning of spring which I...',
+    date: {
+      icon: <CiCalendar />,
+      month: months[month],
+      day: today,
+      year: year,
+    },
+    author: {
+      icon: <CiUser />,
+      name: 'By Travel@'
+    },
+    comments: {
+      icon: <GoCommentDiscussion />,
+      comment_array: []
+    }
+  },
+  {
+    id: 2,
+    img: travel2,
+    type: 'COMPANY INSIGHT',
+    title: 'Pack wisely before traveling',
+    description: 'A wonderful serenity has taken possession of my entire soul, like these sweet morning of spring which I...',
+    date: {
+      icon: <CiCalendar />,
+      month: months[month],
+      day: today,
+      year: year,
+    },
+    author: {
+      icon: <CiUser />,
+      name: 'By Travel@'
+    },
+    comments: {
+      icon: <GoCommentDiscussion />,
+      comment_array: []
+    }
+  },
+  {
+    id: 3,
+    img: travel1,
+    type: 'COMPANY INSIGHT',
+    title: 'Pack wisely before traveling',
+    description: 'A wonderful serenity has taken possession of my entire soul, like these sweet morning of spring which I...',
+    date: {
+      icon: <CiCalendar />,
+      month: months[month],
+      day: today,
+      year: year,
+    },
+    author: {
+      icon: <CiUser />,
+      name: 'By Travel@'
+    },
+    comments: {
+      icon: <GoCommentDiscussion />,
+      comment_array: []
+    }
+  },
+  {
+    id: 4,
+    img: travel2,
+    type: 'COMPANY INSIGHT',
+    title: 'Pack wisely before traveling',
+    description: 'A wonderful serenity has taken possession of my entire soul, like these sweet morning of spring which I...',
+    date: {
+      icon: <CiCalendar />,
+      month: months[month],
+      day: today,
+      year: year,
+    },
+    author: {
+      icon: <CiUser />,
+      name: 'By Travel@'
+    },
+    comments: {
+      icon: <GoCommentDiscussion />,
+      comment_array: []
+    }
+  },  {
+    id: 5,
+    img: travel1,
+    type: 'COMPANY INSIGHT',
+    title: 'Pack wisely before traveling',
+    description: 'A wonderful serenity has taken possession of my entire soul, like these sweet morning of spring which I...',
+    date: {
+      icon: <CiCalendar />,
+      month: months[month],
+      day: today,
+      year: year,
+    },
+    author: {
+      icon: <CiUser />,
+      name: 'By Travel@'
+    },
+    comments: {
+      icon: <GoCommentDiscussion />,
+      comment_array: []
+    }
+  },
+  {
+    id: 6,
+    img: travel2,
+    type: 'COMPANY INSIGHT',
+    title: 'Pack wisely before traveling',
+    description: 'A wonderful serenity has taken possession of my entire soul, like these sweet morning of spring which I...',
+    date: {
+      icon: <CiCalendar />,
+      month: months[month],
+      day: today,
+      year: year,
+    },
+    author: {
+      icon: <CiUser />,
+      name: 'By Travel@'
+    },
+    comments: {
+      icon: <GoCommentDiscussion />,
+      comment_array: []
+    }
+  }
+]
 export const config = {
   navbar: [
     {
@@ -33,6 +293,7 @@ export const config = {
         en: 'Home',
         ru: 'Дом'
       },
+      route: ROUTES.home
     },
     {
       id: 2,
@@ -41,6 +302,7 @@ export const config = {
         en: 'Tours',
         ru: 'Туры'
       },
+      route: ROUTES.tours
     },
     {
       id: 3,
@@ -49,6 +311,7 @@ export const config = {
         en: 'Destinations',
         ru: 'Направления'
       },
+      route: ROUTES.destination
     },
     {
       id: 4,
@@ -57,6 +320,7 @@ export const config = {
         en: 'About us',
         ru: 'О нас'
       },
+      route: ROUTES.about
     },
   ],
   auth_buttons: [

@@ -15,13 +15,13 @@ export const AppRoutes = () => {
     if(location.pathname === '/') navigate('/armtours');
   },[]);
 
-    return (
-      <Routes>
-        <Route path={ROUTES.overview} element={<OverviewPage />}></Route>
-        <Route path={ROUTES.home} element={<HomePage />}></Route>
-        <Route path={ROUTES.signup} element={<SignUpPage />}></Route>
-        <Route path={ROUTES.login} element={<LoginPage />}></Route>
-        <Route path={ROUTES.profile} element={<ProfilePage />}></Route>
-      </Routes>
-    )
+  return (
+    <Routes>
+      <Route path={ROUTES.overview} element={<OverviewPage />}></Route>
+      <Route path={ROUTES.home} element={<HomePage />}></Route>
+      <Route path={ROUTES.signup} element={<SignUpPage />}></Route>
+      <Route path={ROUTES.login} element={<LoginPage />}></Route>
+      <Route path={ROUTES.profile} element={<ProfilePage />}></Route>
+    </Routes>
+  )
 } 

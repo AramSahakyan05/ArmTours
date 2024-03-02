@@ -26,9 +26,9 @@ export const Header = () => {
 
     return (
       <header>
-        <Container>
+        <div className="header-inner"> 
           <div className="logo">
-            <h1>ARMTOURS</h1>
+            <h1 onClick={() => navigate('/armtours')}>ARMTOURS</h1>
           </div>
           <nav>
           <ul>
@@ -56,7 +56,7 @@ export const Header = () => {
             <span 
               className="auth-icon"
               onClick={() => {
-                navigate('/signup');
+                navigate('/armtours/signup');
               }}  
             >
               <FaRegUser />
@@ -84,7 +84,7 @@ export const Header = () => {
               }
             </ul>
           </div>
-        </Container>
+        </div>
       </header>
     )
 }

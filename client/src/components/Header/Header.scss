@@ -5,9 +5,9 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  background-color: var(--white);
-  z-index: 1;
-   > .container {
+  background-color: #F5FBFF;
+  z-index: 2;
+   > .header-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -15,6 +15,7 @@ header {
         margin-left: 20px;
         > h1 {
           color: var(--home-explore);
+          cursor: pointer;
         }
       }
       > nav {
@@ -61,21 +62,18 @@ header {
           color: var(--button-hover-background);
         }
         > .hidden-langs {
-          display: flex;
-          flex-direction: column;
           position: absolute;
           list-style: none;
+          gap: 5px;
           border-left: 4px solid var(--plan-button-color);
           border-radius: 5px 0 10px 5px;
-          padding: 10px 59px 20px 25px;
           transform: translateY(66px)!important;
           opacity: 0;
           transition: all .2s;
           z-index: -2;
           visibility: hidden;
           background-color: var(--home-explore);
-          padding: 10px;
-          padding-top: 5px;
+          padding: 5px 10px 10px;
           > li {
             list-style-type: none;
             font-size: 1.2rem;
@@ -83,6 +81,7 @@ header {
             cursor: pointer;
             transition: all .2s;
             color: var(--white);
+            margin: 5px 0;
             &:hover {
               color: var(--footer-border-color);
             }

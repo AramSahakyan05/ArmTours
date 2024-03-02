@@ -1,0 +1,15 @@
+.customer-reviews {
+  padding-top: 200px;
+}
+.hurry-up {
+  display: flex;
+  > div {
+    width: 50%;
+  }
+  &-image-block {
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

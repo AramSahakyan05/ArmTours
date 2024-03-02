@@ -1,0 +1,27 @@
+.reviews-section {
+  padding: 100px 20px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  > .reviews-heading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  > .reviews {
+    > .swiper {
+      width: 100%;
+      > .swiper-wrapper {
+        display: flex;
+        > .swiper-slide {
+          width: 100% !important;
+        }
+      }
+      > .swiper-button-prev, .swiper-button-next {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Cham:wght@100..900&display=swap');
+
+.perfect-destinations {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  > .map-background {
+    width: 50%;
+    background-position: center;
+    background-size: cover;
+    > .destinations-left-side {
+      backdrop-filter: blur(4px);
+      height: 100%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 50px;
+      > .destinations-left-side-headings {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        > h1 {
+          font-size: 3.5rem;
+          font-weight: 900;
+          line-height: 55px;
+        }
+      }
+      > p {
+        line-height: 25px;
+      }
+      > .destination-type-info {
+        display: flex;
+        justify-content: space-between;
+        > ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          > li {
+            list-style-type: none;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  > .destination-slider {
+    width: 88%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    > .swiper {
+      width: 100%;
+      > .swiper-wrapper {
+        display: flex;
+        gap: 10px;
+        height: 100%;
+        > .swiper-slide {
+          width: 280px !important;
+        }
+      }
+      > .swiper-button-prev, .swiper-button-next {
+        display: none;
+      }
+    }
+  }
+}
+.destination-slider-item {
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  .destination-slider-item-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    > .tour-count {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}
