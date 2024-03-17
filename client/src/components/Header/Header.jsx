@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
-import { config } from "../../constants";
+import { ROUTES, config } from "../../constants";
 import { Container } from "../UIContainer/Container"
 import i18n from "../../i18n";
 import { langs } from "../../constants";
@@ -26,41 +26,43 @@ export const Header = () => {
 
     return (
       <header>
-        <div className="header-inner"> 
-          <div className="logo">
+        <Container>
+          <div className="header-inner"> 
+            <div className="logo">
             <h1 onClick={() => navigate('/armtours')}>ARMTOURS</h1>
-          </div>
-          <nav>
-          <ul>
-            {
-              config.navbar.map(({id, title}) => {
-                return (
-                  <li 
-                    key={id}
-                    onClick={() => {
-                      id === 1 && navigate('/armtours/home');
-                    }}
-                  >
-                    {title[language]}
-                  </li>
-                )
-              })
-            }
-          </ul>
-          </nav>
-          <div className="contact-auth-buttons">
-            <span className="contact-phone">
-              <IoMdKeypad />
-              +37477665544
-            </span>
-            <span 
-              className="auth-icon"
-              onClick={() => {
-                navigate('/armtours/signup');
-              }}  
-            >
-              <FaRegUser />
-            </span>
+            </div>
+            <nav>
+            <ul>
+              {
+                config.navbar.map(({id, title}) => {
+                  return (
+                    <li 
+                      key={id}
+                      onClick={() => {
+                        navigate(`${ROUTES[title['en'].trim().toLowerCase()]}`);
+                        console.log(title);
+                      }}
+                    >
+                      {title[language]}
+                    </li>
+                  )
+                })
+              }
+            </ul>
+            </nav>
+            <div className="contact-auth-buttons">
+              <span className="contact-phone">
+                <IoMdKeypad />
+                +37477665544
+              </span>
+              <span 
+                className="auth-icon"
+                onClick={() => {
+                  navigate('/armtours/signup');
+                }}  
+              >
+                <FaRegUser />
+              </span>
           </div>
           <div className="langs">
             <span 
@@ -85,6 +87,7 @@ export const Header = () => {
             </ul>
           </div>
         </div>
-      </header>
-    )
+      </Container>
+    </header>
+  )
 }

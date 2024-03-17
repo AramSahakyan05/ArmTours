@@ -6,6 +6,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
 import './Footer.scss';
+import { Container } from '../UIContainer/Container';
 
 export const Footer = () => {
   const {
@@ -15,6 +16,7 @@ export const Footer = () => {
   return (
     <footer>
       {/* Footer Inner part */}
+      <Container>
       <div className='footer-inner'>
         {/* Footer Logo, Address and Map Part */}
         <div className="logo-address-map">
@@ -119,21 +121,24 @@ export const Footer = () => {
           </div>
         </div>
       </div>
+      </Container>
       <div className="footer-bottom">
-          <div className="copyright">
+        <Container>
+        <div className="copyright">
           © 2023 ARMTOURS, All Rights Reserved
-          </div>
-          <div className="footer-bottom-list">
-            <ul>
-              <li>Privacy</li>
-              <li>Policy</li>
-              <li>About Us</li>
-              <li>Support</li>
-              <li>FAQ</li>
-              <li>Blog</li>
-            </ul>
-          </div>
         </div>
+        <div className="footer-bottom-list">
+          <ul>
+            <li>Privacy</li>
+            <li>Policy</li>
+            <li>About Us</li>
+            <li>Support</li>
+            <li>FAQ</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+        </Container>
+      </div>
     </footer>
   )
 }

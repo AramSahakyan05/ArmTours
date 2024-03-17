@@ -1,13 +1,12 @@
-import { bannerImages } from "../../../constants"
+import tour_banner from '../../../assets/banner/tour-banner.png';
+
 import './Banner.scss';
 
-export const Banner = () => {
+export const Banner = ({title}) => {
   return (
-    <div 
-      className="banner"
-      style={{ background: `#121619 url(${bannerImages[Math.floor(Math.random() * 3)]}) no-repeat center / cover` }}
-    >
-      {/* <img src={bannerImages[Math.floor(Math.random() * 4) + 1]} alt="Page Banner" /> */}
+    <div className='banner'>
+      <img src={tour_banner} alt="" />
+      <h1>{title}</h1>
     </div>
-  ) 
+  )
 }

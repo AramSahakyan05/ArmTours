@@ -12,7 +12,7 @@
 :root {
   --white: #fff;
   --black: #000;
-  --max-width: 1270px;
+  --max-width: 1200px;
   --button-background: #35452B;
   --button-hover-background: #727D6B;
   --learn-more-button: #1E2203;
@@ -27,6 +27,7 @@
   --footer-border-color: #D9D9D9;
   --home-explore: #313638;
   --subheading-color: #dc834e;
+  --home-section-background: #f5fffb;
 }
 h2.subheading {
   font-family: 'Thea Amelia', sans-serif;  

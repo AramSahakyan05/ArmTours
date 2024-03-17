@@ -28,7 +28,10 @@ export const Plan = () => {
                   <p className={`plan-price  ${id === 1 && language === 'am' ? "free-price" : id === 3 && language === 'am' ? 'pro-price' : ''} `}>
                     {currency} <span>{price}</span> / {term[language]}
                   </p>
-                  <ul className='description'>
+                  <ul 
+                    className='description'
+                    style={{marginTop: language === 'ru' && id === 2 && '50px'}}
+                  >
                     {
                       description.map(({id, title}) => {
                         return <li key={generateUniqueId()}>{title[language]}</li>

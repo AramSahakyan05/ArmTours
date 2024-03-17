@@ -6,6 +6,7 @@ import { LoginPage } from "../pages/LoginPage";
 import { OverviewPage } from '../pages/OverviewPage';
 import { HomePage } from '../pages/HomePage';
 import { ProfilePage } from "../pages/ProfilePage";
+import { TourPage } from "../pages/TourPage";
 
 export const AppRoutes = () => {
   const location = useLocation();
@@ -22,6 +23,7 @@ export const AppRoutes = () => {
       <Route path={ROUTES.signup} element={<SignUpPage />}></Route>
       <Route path={ROUTES.login} element={<LoginPage />}></Route>
       <Route path={ROUTES.profile} element={<ProfilePage />}></Route>
+      <Route path={ROUTES.tours} element={<TourPage />}></Route>
     </Routes>
   )
 } 

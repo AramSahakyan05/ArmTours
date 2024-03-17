@@ -1,4 +1,4 @@
-import { Banner } from '../UIContainer/Banner/Banner';
+import { ProfileBanner } from '../UIContainer/ProfileBanner/ProfileBanner';
 import { Container } from '../UIContainer/Container';
 import user_image from '../../assets/user.jpg';
 import { FaPhoneAlt } from "react-icons/fa";
@@ -13,13 +13,13 @@ export const Profile = () => {
   const navigate = useNavigate();
   return (
     <div className='profile'>
-      <Banner />
+      <ProfileBanner />
       <Container>
         <div 
           className="logout" 
           onClick={() => {
             navigate('/armtours/login');
-            localStorage.remove('user');
+            localStorage.removeItem('user');
           }}
         >
           <span>Logout</span>

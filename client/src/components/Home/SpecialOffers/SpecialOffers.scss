@@ -4,17 +4,16 @@
 }
 .special-offers {
   background-color: #F5FBFF;
-  padding: 30px;
-  padding-top: 60px;
+  padding: 70px 0px;
   margin-top: -4px;
-  &-headings {
+  > .container {
+  > .special-offers-headings {
     text-align: center;
   }
   > .offers {
     margin-top: 70px;
     display: flex;
-    gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
     > .first-offer {
       width: 30%;
       height: 300px;
@@ -75,5 +74,6 @@
         }
       }
     }
+  }
   }
 }

@@ -41,7 +41,7 @@ export const ROUTES = {
   profile: '/armtours/profile',
   tours: '/armtours/tours',
   destination: '/armtours/destinations',
-  about: '/armtours/about'
+  aboutus: '/armtours/about'
 }
 export const bannerImages = [
   banner1, banner2, banner3, banner4

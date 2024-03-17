@@ -1,25 +1,28 @@
 .travel-tips {
-  padding: 60px 20px;
-  &-heading {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  &-inner {
-    display: flex;
-    padding-top: 70px;
-    > .swiper {
-      width: 100%;
-      > .swiper-wrapper {
-        display: flex;
-        justify-content: space-between;
-        > .swiper-slide {
-          width: 50% !important;
+  padding: 70px 30px;
+  background-color: var(--home-section-background);
+  > .container {
+    .travel-tips-heading {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .travel-tips-inner {
+      display: flex;
+      padding-top: 70px;
+      > .swiper {
+        width: 100%;
+        > .swiper-wrapper {
+          display: flex;
+          justify-content: space-between;
+          > .swiper-slide {
+            width: 50% !important;
+          }
         }
-      }
-      > .swiper-button-prev, .swiper-button-next {
-        display: none;
+        > .swiper-button-prev, .swiper-button-next {
+          display: none;
+        }
       }
     }
   }
